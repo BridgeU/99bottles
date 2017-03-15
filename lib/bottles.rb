@@ -8,14 +8,23 @@ class Bottles
 
     <<~HEREDOC
       #{num_bottles(num)} of beer on the wall, #{num_bottles(num)} of beer.
-      Take one down and pass it around, #{num_bottles(num-1)} of beer on the wall.
+      Take #{article(num)} down and pass it around, #{num_bottles(num-1)} of beer on the wall.
     HEREDOC
   end
 
   private
 
-  def num_bottles(num)
-    num == 1? "1 bottle" : "#{num} bottles"
+  def article(num)
+    num == 1? "it" : "one"
   end
 
+  def num_bottles(num)
+    if num == 1
+      "1 bottle"
+    elsif num == 0
+      "no more bottles"
+    else
+      "#{num} bottles"
+    end
+  end
 end
