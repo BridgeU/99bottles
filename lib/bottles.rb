@@ -1,6 +1,14 @@
 require 'pry'
 
 class Bottles
+  def verses(i, j)
+    song = ""
+    # (j..i).each {|num| song << verse(num)}
+    song << verse(i)
+    song << "\n"
+    song << verse(j)
+    song
+  end
 
   def verse(num)
     # binding.pry
