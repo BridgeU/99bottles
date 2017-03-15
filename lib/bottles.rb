@@ -19,6 +19,10 @@ VERSE
     output
   end
 
+  def song
+
+  end
+
   def second_line(number)
     if number == 0
       "Go to the store and buy some more, 99 bottles of beer on the wall."
