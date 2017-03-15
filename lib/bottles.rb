@@ -19,7 +19,7 @@ VERSE
   end
 
   def song
-
+    verses(99, 0)
   end
 
   def first_line(number)
