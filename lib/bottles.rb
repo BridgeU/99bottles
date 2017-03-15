@@ -10,11 +10,7 @@ VERSE
   end
 
   def number_of_bottles(number)
-    if number == 1
-      bottle_name = "bottle"
-    else
-      bottle_name = "bottles"
-    end
+    bottle_name = number == 1? "bottle" : "bottles"
     "#{number} #{bottle_name}"
   end
 
@@ -25,4 +21,6 @@ VERSE
       "one"
     end
   end
+
+
 end
