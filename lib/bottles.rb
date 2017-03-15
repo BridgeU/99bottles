@@ -1,9 +1,9 @@
 class Bottles
   def verse(number)
-    <<-VERSE
-#{first_line(number)}
-#{second_line(number)}
-VERSE
+    <<~VERSE
+      #{first_line(number)}
+      #{second_line(number)}
+    VERSE
   end
 
   def verses(first, last)
