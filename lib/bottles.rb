@@ -15,11 +15,7 @@ VERSE
   end
 
   def one_or_it(number)
-    if number == 1
-      "it"
-    else
-      "one"
-    end
+    number == 1? "it" : "one"
   end
 
 
