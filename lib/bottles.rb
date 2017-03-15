@@ -1,8 +1,7 @@
 class Bottles
   def verse(number)
-    number_of_bottles = number_of_bottles(number)
     <<-VERSE
-#{capitalize_start(number_of_bottles)} of beer on the wall, #{number_of_bottles} of beer.
+#{first_line(number)}
 #{second_line(number)}
 VERSE
   end
@@ -21,6 +20,11 @@ VERSE
 
   def song
 
+  end
+
+  def first_line(number)
+    number_of_bottles = number_of_bottles(number)
+    "#{capitalize_start(number_of_bottles)} of beer on the wall, #{number_of_bottles} of beer."
   end
 
   def second_line(number)
