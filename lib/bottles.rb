@@ -7,6 +7,10 @@ class Bottles
 VERSE
   end
 
+  def verses(first, last)
+
+  end
+
   def second_line(number)
     if number == 0
       "Go to the store and buy some more, 99 bottles of beer on the wall."
