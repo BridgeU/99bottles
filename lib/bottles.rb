@@ -37,6 +37,18 @@ class Bottles
     line_1 + "\n" + line_2 + "\n"
   end
 
+  def verses(bottles_in_first_verse,bottles_at_start_of_last_verse)
+    bottle_counts = (bottles_at_start_of_last_verse..bottles_in_first_verse).to_a.reverse
+    bottle_verses = bottle_counts.map do |count|
+      verse(count)
+    end
+    bottle_verses.join("\n")
+  end
+
+  def song
+    verses(STARTING_BOTTLES, 0)
+  end
+
   private
 
   def first_line(bottle_state)
@@ -50,7 +62,6 @@ class Bottles
     eventual_state = if bottle_state.count == 0
       BottleGroup.new(STARTING_BOTTLES)
     else
-     puts bottle_state.count
       BottleGroup.new(bottle_state.count - 1)
     end
 
