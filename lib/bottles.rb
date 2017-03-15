@@ -24,7 +24,7 @@ VERSE
 
   def first_line(number)
     number_of_bottles = number_of_bottles(number)
-    "#{capitalize_start(number_of_bottles)} of beer on the wall, #{number_of_bottles} of beer."
+    "#{number_of_bottles.capitalize} of beer on the wall, #{number_of_bottles} of beer."
   end
 
   def second_line(number)
@@ -45,9 +45,4 @@ VERSE
   def one_or_it(number)
     number == 1? "it" : "one"
   end
-
-  def capitalize_start(s)
-    s.slice(0,1).capitalize + s.slice(1..-1)
-  end
-
 end
