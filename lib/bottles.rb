@@ -11,7 +11,8 @@ VERSE
 
   def number_of_bottles(number)
     bottle_name = number == 1? "bottle" : "bottles"
-    "#{number} #{bottle_name}"
+    number_name = number == 0? "no more" : "#{number}"
+    "#{number_name} #{bottle_name}"
   end
 
   def one_or_it(number)
