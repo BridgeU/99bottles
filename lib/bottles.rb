@@ -8,8 +8,12 @@ VERSE
   end
 
   def second_line(number)
-    next_number_of_bottles = number_of_bottles(number - 1)
-    "Take #{one_or_it(number)} down and pass it around, #{next_number_of_bottles} of beer on the wall."
+    if number == 0
+      "Go to the store and buy some more, 99 bottles of beer on the wall."
+    else
+      next_number_of_bottles = number_of_bottles(number - 1)
+      "Take #{one_or_it(number)} down and pass it around, #{next_number_of_bottles} of beer on the wall."
+    end
   end
 
   def number_of_bottles(number)
