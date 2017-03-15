@@ -1,19 +1,15 @@
 require 'pry'
 
 class Bottles
-  def verses(i, j)
-    song = ""
-    # (j..i).each {|num| song << verse(num)}
-    song << verse(i)
-    song << "\n"
-    song << verse(j)
-    song
+  def verses(start, last)
+    verse_indices = (last..start).to_a.reverse
+
+    verse_indices.map do |num|
+      verse(num)
+    end.join("\n")
   end
 
   def verse(num)
-    # binding.pry
-
-
     <<~HEREDOC
       #{first_line(num)}
       #{second_line(num)}
