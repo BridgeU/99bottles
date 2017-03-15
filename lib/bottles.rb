@@ -2,7 +2,7 @@ class Bottles
   def verse(number)
     number_of_bottles = number_of_bottles(number)
     <<-VERSE
-#{number_of_bottles} of beer on the wall, #{number_of_bottles} of beer.
+#{capitalize_start(number_of_bottles)} of beer on the wall, #{number_of_bottles} of beer.
 #{second_line(number)}
 VERSE
   end
@@ -26,5 +26,8 @@ VERSE
     number == 1? "it" : "one"
   end
 
+  def capitalize_start(s)
+    s.slice(0,1).capitalize + s.slice(1..-1)
+  end
 
 end
