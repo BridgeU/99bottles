@@ -1,6 +1,10 @@
 require 'pry'
 
 class Bottles
+  def song
+    verses(99, 0)
+  end
+
   def verses(start, last)
     verse_indices = (last..start).to_a.reverse
 
