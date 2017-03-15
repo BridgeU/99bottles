@@ -11,6 +11,9 @@ VERSE
     output = ""
     while first >= last
       output << verse(first)
+      if first != last
+        output << "\n"
+      end
       first -= 1
     end
     output
