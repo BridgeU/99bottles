@@ -8,7 +8,12 @@ VERSE
   end
 
   def verses(first, last)
-
+    output = ""
+    while first >= last
+      output << verse(first)
+      first -= 1
+    end
+    output
   end
 
   def second_line(number)
