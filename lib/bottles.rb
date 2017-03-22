@@ -7,6 +7,16 @@ class Bottles
     string
   end
 
+  def verses(*args)
+    strings = []
+    
+    args.each do |number|
+      strings << verse(number)
+    end
+
+    strings.join("\n")
+  end
+
   def pluralize(n, singular, plural = nil)
     if n.zero?
       'no more bottles'
@@ -23,9 +33,9 @@ class Bottles
 
   def shop(num)
     if num > 0
-      "Take #{num == 1 ? "it" : "one"} down and pass it around"
+      "Take #{num == 1 ? 'it' : 'one'} down and pass it around"
     else
-      "Go to the store and buy some more"
+      'Go to the store and buy some more'
     end
   end
 end
