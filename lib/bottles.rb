@@ -7,11 +7,13 @@ class Bottles
     string
   end
 
-  def verses(*args)
+  def verses(start, finish)
     strings = []
-    
-    args.each do |number|
+    number = start
+
+    while(number >= finish)
       strings << verse(number)
+      number -= 1
     end
 
     strings.join("\n")
