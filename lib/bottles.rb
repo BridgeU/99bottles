@@ -40,4 +40,8 @@ class Bottles
       'Go to the store and buy some more'
     end
   end
+
+  def song
+    verses(99, 0)
+  end
 end
