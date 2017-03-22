@@ -2,8 +2,8 @@ class Bottles
 
   def verse(n)
     <<~HEREDOC
-      #{bottles(n)} of beer on the wall, #{bottles(n)} of beer.
-      Take #{pronoun(n)} down and pass it around, #{bottles(n-1)} of beer on the wall.
+      #{first_line(n)}
+      #{second_line(n)}
     HEREDOC
   end
 
@@ -19,4 +19,19 @@ class Bottles
     n == 1? 'it' : 'one'
   end
 
+  def second_line(n)
+    if n == 0
+      "Go to the store and buy some more, 99 bottles of beer on the wall."
+    else
+      "Take #{pronoun(n)} down and pass it around, #{bottles(n-1)} of beer on the wall."
+    end
+  end
+
+  def first_line(n)
+    if n == 0
+      "#{bottles(n).capitalize} of beer on the wall, #{bottles(n)} of beer."
+    else
+      "#{bottles(n)} of beer on the wall, #{bottles(n)} of beer."
+    end
+  end
 end
