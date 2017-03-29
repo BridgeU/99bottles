@@ -1,13 +1,11 @@
 class Bottles
   def verse(number)
-    @nr_bottles = number
-    sing
+    sing(number)
   end
 
   def verses(start, finish)
     (finish..start).to_a.reverse.map do |bottles|
-      @nr_bottles = bottles
-      sing
+      sing(bottles)
     end.join("\n")
   end
 
@@ -17,7 +15,9 @@ class Bottles
 
   private
 
-  def sing
+  def sing(bottles)
+    @nr_bottles = bottles
+
     "#{how_many_bottles.capitalize} of beer on the wall, "\
     "#{how_many_bottles} of beer."\
     "\n"\
