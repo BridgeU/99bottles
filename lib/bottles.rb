@@ -38,27 +38,17 @@ class Bottles
 
   def how_many_bottles
     message = if @nr_bottles > 0
-      pluralize(@nr_bottles, "bottle")
+      nr_bottles
     else
       "no more bottles"
     end
   end
-
-  #--
 
   def one_or_it
     @nr_bottles > 1 ? "one" : "it"
   end
 
-  def next_bottles(number)
-    if number - 1 > 0
-      pluralize(number - 1, "bottle")
-    else
-      "no more bottles"
-    end
-  end
-
-  def pluralize(number, string)
-    "#{number} #{string}#{number > 1 ? 's' : ''}"
+  def nr_bottles
+    "#{@nr_bottles} bottle#{@nr_bottles > 1 ? 's' : ''}"
   end
 end
