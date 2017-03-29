@@ -4,9 +4,7 @@ class Bottles
   end
 
   def verses(start, finish)
-    (finish..start).to_a.reverse.map do |bottles|
-      sing(bottles)
-    end.join("\n")
+    (finish..start).to_a.reverse.map{ |bottles| sing(bottles) }.join("\n")
   end
 
   def song
