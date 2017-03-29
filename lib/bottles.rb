@@ -5,9 +5,9 @@ class Bottles
   end
 
   def verses(start, finish)
-    (finish..start).to_a.reverse.inject([]) do |song, bottles|
+    (finish..start).to_a.reverse.map do |bottles|
       @nr_bottles = bottles
-      song << sing
+      sing
     end.join("\n")
   end
 
